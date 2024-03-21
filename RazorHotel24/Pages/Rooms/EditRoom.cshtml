@@ -1,0 +1,30 @@
+﻿@page
+@model RazorHotel24.Pages.Rooms.EditRoomModel
+@{
+    ViewData["Title"] = "EditRoom";
+}
+
+<h1>Rediger Værelse oplysninger</h1>
+
+<div class="card">
+    <form method="post">
+
+        <input type="hidden" asp-for="@Model.Room.RoomNr" />
+        <input type="hidden" asp-for="@Model.Room.HotelNr" />
+        <div class="form-group">
+            <label asp-for="@Model.Room.Types" class=" control-label">Type</label>
+            <input asp-for="@Model.Room.Types" class="form-control" />
+            <span asp-validation-for="Room.Types" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Room.Pris" class=" control-label">Pris</label>
+            <input asp-for="@Model.Room.Pris" class="form-control" />
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Opdater Værelse" asp-page-handler="Update" class="btn btn-primary" />
+            <a asp-page="GetAllRooms" asp-route-hotelNo="@Model.Room.HotelNr" class="btn btn-warning">Tilbage til oversigten</a>
+        </div>
+    </form>
+</div>

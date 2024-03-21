@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorHotel24", "RazorHotel24\RazorHotel24.csproj", "{BA51B98E-0075-48F7-B191-B7E835A48165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{68ACED0A-C1A3-411A-9D10-32ABA27E2E46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA51B98E-0075-48F7-B191-B7E835A48165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA51B98E-0075-48F7-B191-B7E835A48165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA51B98E-0075-48F7-B191-B7E835A48165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA51B98E-0075-48F7-B191-B7E835A48165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68ACED0A-C1A3-411A-9D10-32ABA27E2E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68ACED0A-C1A3-411A-9D10-32ABA27E2E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68ACED0A-C1A3-411A-9D10-32ABA27E2E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68ACED0A-C1A3-411A-9D10-32ABA27E2E46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EED9689-6525-4D17-9C6F-5F45A6279399}
+	EndGlobalSection
+EndGlobal

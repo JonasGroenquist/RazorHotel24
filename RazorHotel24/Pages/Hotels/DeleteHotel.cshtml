@@ -1,0 +1,38 @@
+﻿@page
+@model RazorHotel24.Pages.Hotels.DeleteHotelModel
+@{
+    ViewData["Title"] = "DeleteHotel";
+}
+
+<h1>Slet hotel</h1>
+
+<div class="card">
+    <form method="post">
+        <div class="form-group">
+
+            <table>
+                <tr>
+                    <th>Hotel Nummer</th>
+                    <td>@Model.Hotel.HotelNr</td>
+                </tr>
+                <tr>
+                    <th>Navn</th>
+                    <td>@Model.Hotel.Navn</td>
+                </tr>
+                <tr>
+                    <th>Adresse</th>
+                    <td>@Model.Hotel.Adresse</td>
+                </tr>
+                
+
+
+            </table>
+
+            <br />
+
+            <input type="submit" asp-page-handler="Delete" asp-route-number="@Model.Hotel.HotelNr" value="Slet hotel" class="btn btn-danger" />
+            <a asp-page="GetAllHotels" class="btn btn-warning">Fortryd</a>
+
+        </div>
+    </form>
+</div>

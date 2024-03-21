@@ -1,0 +1,53 @@
+﻿@page
+@model RazorHotel24.Pages.Rooms.GetAllRoomsModel
+@{
+    ViewData["Title"] = "GetAllRooms";
+}
+<h1>Number of rooms: @Model.Rooms.Count</h1>
+<h1>Hotel: @Model.Hotel_nr</h1>
+<a asp-page="CreateRoom" asp-route-hotelNr="@Model.Hotel_nr" class="btn btn-secondary">Tilføj nyt værelse</a>
+<form asp-handler="OnGetFilter" method="get">
+    <p>
+        <input asp-for="@Model.Hotel_nr" hidden />
+        <div class="form-group">
+            search: <input type="text" asp-for="@Model.FilterCriteria" />
+            <input type="submit" value="Filter" />
+        </div>
+    </p>
+@*     search: <input type="text" asp-for="@Model.FilterCriteria" />
+    <input type="submit" value="Filter" /> *@
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Room number
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Rooms)
+        {
+            <tr>
+                <td>
+                    @item.RoomNr
+                </td>
+                <td>
+                    @item.Types
+                </td>
+                <td>
+                    @item.Pris
+                </td>
+                <td>
+                    <a asp-page="/Rooms/EditRoom" asp-route-roomNr="@item.RoomNr" asp-route-hotelNr="@item.HotelNr">Edit</a>
+                    <a asp-page="/Rooms/DeleteRoom" asp-route-roomNr="@item.RoomNr" asp-route-hotelNr="@item.HotelNr">Delete</a>|
+                </td>
+            </tr>
+        }
+    </tbody>
